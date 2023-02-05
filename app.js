@@ -2,11 +2,8 @@
 
 var user_name = prompt("Please enter your name: ");
 var gender = prompt("Enter his/her gender: [male / female]");
-if (gender != "male" || gender != "female" || gender != "m" || gender != "f") {
-    gender = prompt("Please enter the gender again: ");
-}
-
-var age = prompt("Please enter your age: ");
+if (gender == "male" || gender == "female" || gender == "m"  || gender == "f") {
+    var age = prompt("Please enter your age: ");
 
 while (age <= 0) {
     alert("You're age have to be more than zero");
@@ -17,11 +14,13 @@ var conf = prompt("Do you want to skip the welcoming message !? [y/n]");
 
 if (conf == "n"){
     switch (gender) {
-        case "female", "f":
+        case "female":
+        case "f": 
             alert("You are welcome Ms. " + user_name);
             break;
         
-        case "male", "m": 
+        case "male":
+        case "m": 
             alert("You are welcome Mr. " + user_name);
             break;
 
@@ -30,6 +29,12 @@ if (conf == "n"){
             break;
     }
 }
+
+}
+else{
+    gender = prompt("Please enter the gender again: ");
+}
+
 
 
 
