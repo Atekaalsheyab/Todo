@@ -36,5 +36,35 @@ else{
 }
 
 
+let ansArr= []; 
+let quesArr=["Do you like coffee", "Do you like tea","Do you like apples"]; 
+function questions(Ques) {
+   
+        let ans= prompt(Ques+" !? (Yes/No)"); 
+        while (ans != "yes" && ans != "no" && ans != "y" && ans != "n") {
+            ans= prompt("Answer a gain: "+Ques+" !? (Yes/No)"); 
+        }
+    return ans; 
+}
+
+function inputAnsr() {
+    for (let index = 0; index < quesArr.length; index++) {
+        ansArr[index]=questions(quesArr[index]); 
+    }
+}
+
+function printAnsArr(ansArr) {
+    for (let index = 0; index < ansArr.length; index++) {
+        console.log(ansArr[index]); 
+        
+    }
+}
+
+inputAnsr(); 
+printAnsArr(ansArr);
+
+
+
+
 
 
